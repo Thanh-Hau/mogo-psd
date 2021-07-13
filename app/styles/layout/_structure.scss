@@ -1,0 +1,57 @@
+.wrapper{
+    max-width: $wrapper;
+    margin: 0 auto;
+}
+.container{
+    max-width: $container + 30px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.block-box{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 96rem;
+    &-caption{
+        font-family: $third-font;
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+    &-heading{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 3rem;
+        padding-bottom: 3.5rem;
+        margin-bottom: 3.5rem;
+        position: relative;
+        &::after{
+            content: '';
+            @include size(6.5rem, 0.4rem);
+            background-color: $primary-color;
+            @include AbsoluteCenter(left);
+            bottom: 0;
+        }
+    }
+    &-desc{
+        font-family: $secondary-font;
+        font-size: 1.5rem;
+        color: $text-color;
+        line-height: 1.4;
+        font-weight: 300;
+        margin-bottom: 10rem;
+    }
+    @include maxWidth(767px){
+        &-caption{
+            font-size: 2rem;
+        }
+        &-heading{
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+        &-desc{
+            font-size: 1.4rem;
+            margin-bottom: 4rem;
+        }
+    }
+}

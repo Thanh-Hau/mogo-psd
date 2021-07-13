@@ -1,0 +1,111 @@
+.quote{
+    padding: 6.5rem 0;
+    background-color: $gray-color;
+    // &-container{
+    //    // @include flexbox(row,center,space-between);
+    // }
+    &-arrow{
+        color: $gray-dark-color;
+        font-size: 3rem;
+        cursor: pointer;
+        padding: 1rem 2rem;
+    }
+    &-item{
+        padding: 0 5.5rem;
+        @include flexbox(row, center, space-betwwen);
+        outline: none;
+    }
+    &-image{
+        @include size(20rem,20rem);
+        object-fit: cover;
+        border-radius: 100rem;
+        margin-right: 2.5rem;
+    }
+    &-icon{
+        width: 15rem;
+        padding: 4rem;
+        border: 0.4rem solid $third-color;
+        align-self: center;
+        flex-shrink: 0;
+        margin-right: 4rem;
+    }
+    &-desc{
+        font-size: 2.4rem;
+        line-height: 1.6;
+        color: $text-color;
+        font-family: $secondary-font;
+        font-style: italic;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+        @include textClamp(3);
+    }
+    &-author{
+        font-family: $third-font;
+        font-size: 2.4rem;
+        padding-left: 7rem;
+        position: relative;
+        &::before{
+            content: "";
+            width: 6rem;
+            height: 0.4rem;
+            background-color: $primary-color;
+            @include AbsoluteCenter("top");
+            left: 0;
+            margin-right: 1rem;
+        }
+    }
+    //slick slider
+    .slick-initialized .slick-slide{
+        display: flex;
+    }
+    .slick-arrow{
+        background-color: transparent;
+        border:0;
+        color: $gray-dark-color;
+        font-size: 3rem;
+        cursor: pointer;
+        padding: 1rem 2rem;
+        @include AbsoluteCenter("top");
+    }
+    .slick-prev{
+        left: 0;
+        z-index: 10;
+    }
+    .slick-next{
+        right: 0;
+        z-index: 10;
+    }
+    @include maxWidth(767px){
+        padding: 3rem 0;
+        &-arrow{
+            display: none;
+        }
+        &-item{
+            padding: 0;
+            
+        }
+        &-image{
+            @include size(10rem,10rem);
+        }
+        &-icon{
+            margin-right: 2rem;
+            width: 10rem;
+            height: 10rem;
+            padding: 2rem;
+        }
+        &-info{
+            //padding-left: 1.5rem;
+        }
+        &-desc{
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        &-author{
+            font-size: 1.6rem;
+            &::before{
+                height: 0.2rem;
+            }
+        }
+    }
+}

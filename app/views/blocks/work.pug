@@ -1,0 +1,63 @@
+section.work 
+    .container 
+        +blockBox({
+            caption: "What we do",
+            heading: "some of our work",
+            desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi aliquid harum possimus ipsa, sint autem magnam neque qui nostrum voluptatibus unde minima velit dicta ducimus, pariatur tenetur exercitationem aut assumenda."
+        })
+    //- .work-grid
+    //-     +workItem
+    //-     +workItem("../images/img-work3.png","fa fa-home")
+    //-     +workItem("../images/img-work2.png","fa fa-home")
+    //-     +workItem("../images/img-work4.png","fa fa-home") 
+    //-     +workItem("../images/img-work5.png","fa fa-cog","Title 5","work-item--full") 
+    //-     +workItem("../images/img-work6.png","fa fa-home")
+    //-     +workItem("../images/img-work7.png","fa fa-home")
+    .work-list
+        .work-column 
+            +workItem({
+                src: "../images/img-work1.png",
+                icon:"fa fa-home",
+                title: "Creatively Designed",
+                desc: "Lorem is pumit"
+            })
+            +workItem({
+                src: "../images/img-work3.png",
+                icon:"fa fa-sun",
+                title: "Creatively Designed",
+                desc: "Lorem is pumit"
+            })
+        .work-column 
+            +workItem({
+                src: "../images/img-work2.png",
+                icon:"fa fa-book",
+                title: "Creatively Designed",
+                desc: "Lorem is pumit"
+            })
+            +workItem({
+                src: "../images/img-work4.png",
+                icon:"fa fa-image",
+                title: "Creatively Designed",
+                desc: "Lorem is pumit"
+            })
+        .work-column 
+            +workItem({
+                src: "../images/img-work5.png",
+                icon: "fa fa-pencil",
+                full: "work-item--full",
+                title: "Creatively Designed",
+                desc: "Lorem is pumit"
+            })
+        .work-column 
+            +workItem({
+                src: "../images/img-work6.png",
+                icon:"fa fa-flower",
+                title: "Creatively Designed",
+                desc: "Lorem is pumit"
+            })
+            +workItem({
+                src: "../images/img-work7.png",
+                icon:"fa fa-bus",
+                title: "Creatively Designed",
+                desc: "Lorem is pumit"
+            })

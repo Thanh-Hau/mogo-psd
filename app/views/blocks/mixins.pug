@@ -1,0 +1,121 @@
+//----------------------menuLink----------------------------//
+mixin menuLink(title, href = "#")
+    li.header-menu-item 
+        a.header-menu-link(href= href)= title
+//---------------------Header-bottom-item-------------------//
+mixin headerBottomItem(data)
+    .header-bottom-item
+        span.header-bottom-number= data.number
+        span.header-bottom-text= data.text
+//---------------------Block-box-------------------//   
+mixin blockBox(data)
+    .block-box
+        h3.block-box-caption= data.caption
+        h2.block-box-heading= data.heading
+        if data.desc
+            p.block-box-desc= data.desc
+//---------------------About-item-------------------//  
+mixin aboutItem(data)
+    .about-item
+        img.about-image(src= data.src)
+        .about-content
+            i.about-icon(class= data.icon)
+            span.about-title= data.title
+//---------------------Number-item-------------------//  
+mixin numberItem(data)
+    .number-item 
+        h4.number-item-count= data.number
+        span.number-item-text= data.text
+//---------------------Service-item-------------------//  
+mixin serviceItem(data)
+    .service-item 
+        img.service-item-icon(src= data.src)
+        .service-item-info 
+            h3.service-item-title= data.title 
+            p.service-item-desc= data.desc
+//---------------------Wedo-item-------------------//
+mixin wedoItem(data,active= "")
+    .wedo-item(class= data.active)
+        .wedo-item-header
+            img(src= data.src).wedo-item-icon
+            h3.wedo-item-title= data.title 
+            i.fal.fa-angle-up.wedo-item-arrow
+        .wedo-item-info 
+            p.wedo-item-text= data.desc
+//---------------------team-social-------------------//   
+mixin teamSocial(fb = "#",tw = "#",pt = "#",ins = "#")
+    ul.team-social
+        li.team-social-item 
+            a.team-social-link(href= fb)
+                i.fab.fa-facebook-f
+        li.team-social-item 
+            a.team-social-link(href= tw)
+                i.fab.fa-twitter
+        li.team-social-item 
+            a.team-social-link(href= pt)
+                i.fab.fa-pinterest
+        li.team-social-item 
+            a.team-social-link(href= ins)
+                i.fab.fa-instagram
+//---------------------team-item-------------------//
+mixin teamItem(data)
+    .team-item 
+        .team-main 
+            img(src= data.src).team-image
+            .team-content 
+                if block 
+                    block
+        .team-info 
+            h3.team-name= data.name
+            span.team-position= data.job
+//---------------------work-item-------------------//
+mixin workItem(data,full = "")
+    .work-item(class= data.full)
+        img(src= data.src).work-image
+        .work-content 
+            i.work-icon(class= data.icon)
+            h2.work-title= data.title
+            span.work-desc.text.text--light= data.desc
+//---------------------people-item-------------------//  
+mixin peopleItem(data)
+    li.people-item
+        img.people-avatar(src= data.src)
+        .people-info 
+            h3.people-name= data.name
+            span.people-job.text.text--light= data.job
+            p.people-desc.text.text--normal= data.desc
+//---------------------Story-item-------------------//
+mixin storyItem(data)
+    li.story-item 
+        .story-media
+            img(src= data.src).story-image
+            .story-date 
+                span.story-date-number= data.date
+                span.story-date-text.text.text--light= data.month
+        h3.story-title= data.title
+        .story-desc.text.text--normal= data.desc
+            p.story-desc-inner 
+        .story-meta 
+            .story-meta-item 
+                i.fa.fa-eye.story-meta-icon
+                span.story-meta-number.text= data.views
+            .story-meta-item 
+                i.fa.fa-comment.story-meta-icon
+                span.story-meta-number.text= data.comments
+//---------------------Quote-item-------------------//
+mixin quoteItem(data, type = false)
+    .quote-item 
+        if data.type == false
+            .quote-icon
+                img(src= data.src)
+        else 
+            img(src= data.src).quote-image
+        .quote-info 
+            p.quote-desc= data.desc
+            span.quote-author= data.author 
+    
+
+
+
+
+    

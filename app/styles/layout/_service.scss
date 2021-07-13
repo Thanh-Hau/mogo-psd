@@ -1,0 +1,55 @@
+.service{
+    padding: 11rem 0 12rem;
+    &-list{
+        @include flexbox();
+        //margin-left: -4rem;
+        margin-top: 6.5rem;
+    }
+    &-list:nth-child(2){
+        border-bottom: 2px solid $gray-color;
+        margin-bottom: 5rem;
+        padding-bottom: 5rem;
+    }
+    &-item{
+        width:calc(33.33%);
+        //margin-left: 4rem;
+        @include flexbox(flex-start);
+    }
+    &-item-icon{
+        margin: 0 3rem;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    &-item-info{
+        width: calc(100% - 9.5rem);
+        height: 100%;
+        @include flexbox(column,flex-start, space-between);
+    }
+    &-item-title{
+        text-transform: uppercase;
+        color: $title-color;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+        line-height: 1.4;
+        @include textClamp(1);
+    }
+    &-item-desc{
+        color: $text-color;
+        line-height: 1.6;
+        font-weight: 300;
+        font-family: $secondary-font;
+    }
+    @include maxWidth(1023px){
+        padding: 5rem 0;
+        &-list{
+            display: block;
+        }
+        &-item{
+            width: 100%;
+        }
+        &-item:not(:last-child){
+            margin-bottom: 3rem;
+            
+        }
+    }
+}

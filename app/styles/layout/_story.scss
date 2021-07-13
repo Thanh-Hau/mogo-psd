@@ -1,0 +1,130 @@
+.story{
+    padding: 10rem 0;
+    background-color: whites;
+    &-list{
+        @include flexbox(row,stretch,space-between);
+    }
+    &-item{
+        width: calc(33.33% - 2rem);
+    }
+    &-media{
+        position: relative;
+    }
+    &-image{
+        @include size(100%,24rem);
+        object-fit: cover;
+    }
+    &-date{
+        padding: 1.5rem 2rem;
+        background-color: $third-color;
+        @include flexbox(column,center,center);
+        color: white;
+        position: absolute;
+        left: -1rem;
+        bottom: 1rem;
+        z-index: 2;
+    }
+    &-date-number{
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    &-date-text{
+        color: white;
+    }
+    &-title{
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        color: $title-color;
+        padding: 2rem 0;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+    &-desc{
+        line-height: 1.8;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $gray-color;
+        margin-bottom: 2rem;
+    }
+    &-desc-inner{
+        @include textClamp(4);
+    }
+    &-meta{
+        @include flexbox(row,center);
+    }
+    &-meta-item{
+        margin-right: 2rem;
+    }
+    &-meta-number{
+        margin-left: 1rem;
+        display: inline-block;
+    }
+    &-meta-icon{
+        font-size: 1.5rem;
+        color: $third-color;
+    }
+    @include maxWidth(767px){
+        padding: 5rem 0;
+        &-image{
+            height: 15rem;
+        }
+        &-title{
+            font-size: 1.3rem;
+            padding: 1rem 0;
+        }
+        &-desc{
+            font-size: 1.3rem;
+            line-height: 1.6;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        &-date{
+            padding: 1rem 1.5rem;
+        }
+        &-date-number{
+            font-size: 2rem;
+        }
+        &-desc-inner{
+            @include textClamp(2);
+        }
+        &-meta-number{
+            font-size: 1rem;
+        }
+    }
+    @include maxWidth(500px){
+        &-list{
+            display: block;
+        }
+        &-image{
+            height: auto;
+        }
+        &-item{
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+        &-desc-inner{
+            @include textClamp(3);
+        }
+    }
+}
+.map{
+    padding: 6rem;
+    background: linear-gradient(to bottom, rgba(white,0.9), rgba(white,0.8))  ,  url("../images/img-map.png") no-repeat center / cover;
+    &-content{
+        @include flexbox(column,center,center);
+    }
+    &-heading{
+        font-size: 2.4rem;
+        font-weight: bold;
+        color: $primary-color;
+        text-transform: uppercase;
+        padding: 2rem 0;
+        position: relative;
+    }
+    &-heading::after{
+        content: '';
+            @include size(6.5rem, 0.4rem);
+            background-color: $primary-color;
+            @include AbsoluteCenter(left);
+            bottom: 0;
+    }
+}

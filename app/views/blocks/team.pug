@@ -1,0 +1,29 @@
+section.team 
+    .container 
+        +blockBox({
+            caption: "Who are you",
+            heading:"Meet our team",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente a eius eum asperiores alias deleniti, nesciunt deserunt rem odit commodi! Incidunt voluptates soluta ad quae architecto quia minus quidem minima."
+        }) 
+        .team-list 
+            +teamItem({
+                src: "../images/img-team1.png",
+                name: "Matthew dix",
+                job: "Graphic design"
+            })
+                +teamSocial("#1","#2","#3","#4")
+            +teamItem({
+                src: "../images/img-team2.png",
+                name: "Christopher Cambell",
+                job: "Branding/UX Team"
+            })
+                +teamSocial("#5","#6","#7","#8")
+            +teamItem({
+                src: "../images/img-team3.png",
+                name: "Michael fertig",
+                job: "Developer"
+            })
+                +teamSocial("#9","#10","#11","#12") 
+section.brand
+    .container
+        img(src="../images/img-logos.png").brand
