@@ -6,9 +6,11 @@
     }
     &-item{
         width: calc(33.33% - 2rem);
+        position: relative;
     }
     &-media{
         position: relative;
+        margin-bottom: 2rem;
     }
     &-image{
         @include size(100%,24rem);
@@ -35,21 +37,20 @@
         text-transform: uppercase;
         font-size: 1.4rem;
         color: $title-color;
-        padding: 2rem 0;
         font-weight: bold;
-        line-height: 1.6;
+        @include textClamp(1);
+        margin-bottom: 2rem;
     }
     &-desc{
         line-height: 1.8;
-        padding-bottom: 2rem;
-        border-bottom: 2px solid $gray-color;
         margin-bottom: 2rem;
-    }
-    &-desc-inner{
-        @include textClamp(4);
+        @include textClamp(2);
+        height: 5rem;
     }
     &-meta{
         @include flexbox(row,center);
+        border-top: 2px solid $gray-color;
+        padding-top: 2rem;
     }
     &-meta-item{
         margin-right: 2rem;
@@ -62,47 +63,23 @@
         font-size: 1.5rem;
         color: $third-color;
     }
-    @include maxWidth(767px){
+// responsive........................................
+    @include maxWidth(1023px){
         padding: 5rem 0;
-        &-image{
-            height: 15rem;
-        }
-        &-title{
-            font-size: 1.3rem;
-            padding: 1rem 0;
-        }
-        &-desc{
-            font-size: 1.3rem;
-            line-height: 1.6;
-            padding-bottom: 1rem;
-            margin-bottom: 1rem;
-        }
-        &-date{
-            padding: 1rem 1.5rem;
-        }
-        &-date-number{
-            font-size: 2rem;
-        }
-        &-desc-inner{
-            @include textClamp(2);
-        }
-        &-meta-number{
-            font-size: 1rem;
-        }
-    }
-    @include maxWidth(500px){
         &-list{
-            display: block;
-        }
-        &-image{
-            height: auto;
+            @include flexbox(column);
         }
         &-item{
             width: 100%;
-            margin-bottom: 4rem;
+            margin: auto;
+            margin-bottom: 3rem;
         }
-        &-desc-inner{
-            @include textClamp(3);
+        &-image{
+            height: auto;
+            max-height: 50rem;
+        }
+        &-desc{
+            height: auto;
         }
     }
 }

@@ -1,29 +1,26 @@
 .service{
     padding: 11rem 0 12rem;
     &-list{
-        @include flexbox();
-        //margin-left: -4rem;
-        margin-top: 6.5rem;
-    }
-    &-list:nth-child(2){
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 3rem;
         border-bottom: 2px solid $gray-color;
-        margin-bottom: 5rem;
+        margin-top: 5rem;
         padding-bottom: 5rem;
     }
+    &-list:last-child{
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
     &-item{
-        width:calc(33.33%);
-        //margin-left: 4rem;
-        @include flexbox(flex-start);
+        @include flexbox(row,stretch);
     }
     &-item-icon{
         margin: 0 3rem;
-        width: 3.5rem;
-        height: 3.5rem;
+        @include size(3rem,3rem);
     }
     &-item-info{
-        width: calc(100% - 9.5rem);
-        height: 100%;
-        @include flexbox(column,flex-start, space-between);
+
     }
     &-item-title{
         text-transform: uppercase;
@@ -43,13 +40,14 @@
         padding: 5rem 0;
         &-list{
             display: block;
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+        &-list:last-child{
+            margin-top: 0;
         }
         &-item{
-            width: 100%;
-        }
-        &-item:not(:last-child){
             margin-bottom: 3rem;
-            
         }
     }
 }

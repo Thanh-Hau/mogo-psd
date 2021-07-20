@@ -33,6 +33,9 @@
     }
     &-item{
         height: 50%;
+        &:hover{
+            cursor: pointer;
+        }
     }
     &-item--full{
         height: 100%;

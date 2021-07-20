@@ -21,8 +21,9 @@
         @include textClamp();
     }
     &-item-text{
+        font-size: 1.4rem;
+        @include textClamp(2);
         line-height: 1.4;
-        @include textClamp();
     }
 //--------------------Responsive 1023px-------------------------
 @include maxWidth(1023px){

@@ -31,15 +31,15 @@ mixin serviceItem(data)
     .service-item 
         img.service-item-icon(src= data.src)
         .service-item-info 
-            h3.service-item-title= data.title 
+            a(href="#").service-item-title= data.title 
             p.service-item-desc= data.desc
 //---------------------Wedo-item-------------------//
-mixin wedoItem(data,active= "")
-    .wedo-item(class= data.active)
+mixin wedoItem(data)
+    li.wedo-item
         .wedo-item-header
             img(src= data.src).wedo-item-icon
             h3.wedo-item-title= data.title 
-            i.fal.fa-angle-up.wedo-item-arrow
+            i.fal.fa-angle-down.wedo-item-arrow
         .wedo-item-info 
             p.wedo-item-text= data.desc
 //---------------------team-social-------------------//   
@@ -88,13 +88,13 @@ mixin peopleItem(data)
 mixin storyItem(data)
     li.story-item 
         .story-media
-            img(src= data.src).story-image
+            a(href="#")
+                img(src= data.src).story-image
             .story-date 
                 span.story-date-number= data.date
                 span.story-date-text.text.text--light= data.month
-        h3.story-title= data.title
+        a(href="#").story-title= data.title
         .story-desc.text.text--normal= data.desc
-            p.story-desc-inner 
         .story-meta 
             .story-meta-item 
                 i.fa.fa-eye.story-meta-icon

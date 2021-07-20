@@ -49,14 +49,32 @@
         font-family: $secondary-font;
         color: $text-color;
     }
+    @include maxWidth(1200px){
+        &-list{
+            @include touchSlider(40%);
+        }
+    }
     @include maxWidth(1023px){
         padding: 5rem 0;
+        --image-height: 42rem;
         &-list{
-            @include touchSlider(80%);
+            @include touchSlider(45%);
         }
     }
     @include maxWidth(767px){
         --image-height: 40rem;
+        &-list{
+            @include touchSlider(55%);
+        }
+    }
+    @include maxWidth(576px){
+        --image-height: 35rem;
+        &-list{
+            @include touchSlider(65%);
+        }
+    }
+    @include maxWidth(425px){
+        --image-height: 30rem;
         &-list{
             @include touchSlider(80%);
         }

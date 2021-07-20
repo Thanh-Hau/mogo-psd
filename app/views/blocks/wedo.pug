@@ -1,18 +1,19 @@
 section.wedo 
     .container
         +blockBox({
-            caption: "What we do",
-            heading: "store about us",
+            caption: "Services",
+            heading: "What we do",
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet delectus accusamus facilis impedit voluptas temporibus a quis voluptates necessitatibus inventore rerum dolore officia itaque vero aspernatur, laborum illum. Labore, quos."
         })
-        .wedo-container#accordion
-            img(src="../images/img-wedo.png").wedo-image
-            .wedo-content
+        .wedo-container
+            .wedo-image
+                img(src="https://images.unsplash.com/photo-1626019082887-900b630b9fd9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80")
+            ul.wedo-content
                 +wedoItem({
                     src: "../images/img-wedo-icon1.png",
                     title: "Photography",
-                    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi est accusamus impedit, aut ex architecto, illo eveniet iste nisi, possimus ea. Odit commodi suscipit debitis rem vitae sint dolorem qui?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi est accusamus impedit, aut ex architecto, illo eveniet iste nisi, possimus ea. Odit commodi suscipit debitis rem vitae sint dolorem qui?",
-                    active: "active"
+                    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi est accusamus impedit, aut ex architecto, illo eveniet iste nisi, possimus ea. Odit commodi suscipit debitis rem vitae sint dolorem qui?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi est accusamus impedit, aut ex architecto, illo eveniet iste nisi, possimus ea. Odit commodi suscipit debitis rem vitae sint dolorem qui?"
+                    
                 })
                 +wedoItem({
                     src: "../images/img-wedo-icon2.png",

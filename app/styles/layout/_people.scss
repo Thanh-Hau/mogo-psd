@@ -24,6 +24,7 @@
         text-transform: uppercase;
         margin-bottom: 1.5rem;
         font-weight: 500;
+        @include textClamp();
     }
     &-job{
         padding-bottom: 2rem;
@@ -31,6 +32,7 @@
         display: inline-block;
         color: $title-color;
         position: relative;
+        @include textClamp();
         &::after{
             content: '';
             @include size(6.5rem, 0.4rem);
@@ -42,6 +44,7 @@
     }
     &-desc{
         line-height: 1.6;
+        @include textClamp(3);
     }
     @include maxWidth(1023px){
         padding: 5rem 0 1rem;
